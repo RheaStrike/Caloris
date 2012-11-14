@@ -34,4 +34,4 @@ But there is not Socket.IO's C++ client that make write Caloris.
 
 To be continued...
 
-by @RheaStrike
+
