@@ -33,3 +33,5 @@ But there is not Socket.IO's C++ client that make write Caloris.
 ## Enjoy WebScoket: node.js + Socket.IO + Caloris ##
 
 To be continued...
+
+by @RheaStrike
