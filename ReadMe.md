@@ -14,6 +14,9 @@ I was analyzed Socket.IO's TCP packet and write packet code on C/C++.
 See more [http://rhea.pe.kr/515](http://rhea.pe.kr/515).
 
 ![](http://github.com/RheaStrike/Caloris/raw/master/PubImage/websocket_framing.PNG)
+
+## Socket.IO protocol ##
+
 ![](http://github.com/RheaStrike/Caloris/raw/master/PubImage/ws.png)
 
 ## WSAEventSelect ##
