@@ -4,7 +4,7 @@
 
 ## What is Caloris? ##
 
-**Caloris** is a simple Win32 client library for Socket.IO, without Boost::Asio. Boost::Asio is most powerful library, but Asio's IOCP model have too many thread.
+**Caloris** is a simple Win32 client library for Socket.IO, without Boost::Asio. Boost::Asio is most powerful library, but Asio's IOCP model have too many thread on client side.
 So, Caloris select **WSAEventSelect** model.
 
 ## Websocket protocol ##
