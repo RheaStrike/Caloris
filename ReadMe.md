@@ -12,8 +12,8 @@ So, Caloris select **WSAEventSelect** model.
 Socket.IO is a module of node.js that base on RFC6455, but modified.
 I was analyzed Socket.IO's TCP packet and write packet code on C/C++.
 See [http://rhea.pe.kr/515](http://rhea.pe.kr/515).
-![](http://github.com/RheaStrike/Caloris/raw/master/PubImage/websocket_framing.PNG)
 
+![](http://github.com/RheaStrike/Caloris/raw/master/PubImage/websocket_framing.PNG)
 ![](http://github.com/RheaStrike/Caloris/raw/master/PubImage/ws.png)
 
 ## WSAEventSelect ##
