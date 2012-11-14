@@ -32,7 +32,6 @@ CCaloris::CCaloris(HWND* phWnd)
 
 CCaloris::~CCaloris(void)
 {	
-	// 크리티컬섹션이 삭제되기 전에 이벤트 스레드를 종료시켜보자.
 	CloseSocket();
 
 	DeleteCriticalSection(&m_CriticalSection);
@@ -364,9 +363,7 @@ void CCaloris::OnReceive(int nErrorCode)
 	OutputDebugStringA(m_strRecv.c_str());
 	OutputDebugStringA("\n");
 #endif // _DEBUG
-	//
-	// Game에게 알려주는 방법
-	//
+
 	SendMessage(*m_pParentWnd, msgID, 0, 0);
 	LeaveCriticalSection(&m_CriticalSection); 
 
