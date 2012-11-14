@@ -11,14 +11,14 @@ So, Caloris select **WSAEventSelect** model.
 
 Socket.IO is a module of node.js that base on RFC6455, but modified.
 I was analyzed Socket.IO's TCP packet and write packet code on C/C++.
-See [http://rhea.pe.kr/515](http://rhea.pe.kr/515).
+See more [http://rhea.pe.kr/515](http://rhea.pe.kr/515).
 
 ![](http://github.com/RheaStrike/Caloris/raw/master/PubImage/websocket_framing.PNG)
 ![](http://github.com/RheaStrike/Caloris/raw/master/PubImage/ws.png)
 
 ## WSAEventSelect ##
 
-Caloris's socket model is WSAEventSelect. This is an asynchronous I/O and very fast. I like WSAEventSelect on client side. See 
+Caloris's socket model is WSAEventSelect. This is an asynchronous I/O and very fast. I like WSAEventSelect on client side. See more 
 [http://msdn.microsoft.com/en-us/library/windows/desktop/ms741576(v=vs.85).aspx](http://msdn.microsoft.com/en-us/library/windows/desktop/ms741576(v=vs.85).
 ![](http://github.com/RheaStrike/Caloris/raw/master/PubImage/EventCaloris.PNG)
 
