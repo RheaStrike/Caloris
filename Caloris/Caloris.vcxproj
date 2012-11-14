@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4333DC6B-E2D5-443C-989A-129811007EE3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Caloris</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../Include/; ../Include/JSONCPP/;</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Message>..\ClientLib 폴더로 복사합니다.</Message>
+      <Command>copy $(OutDir)$(TargetFileName) ..\Bin\$(TargetName)D.Lib</Command>
+    </PostBuildEvent>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../Include/; ../Include/JSONCPP/;</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Message>..\ClientLib 폴더로 복사합니다.</Message>
+      <Command>copy $(OutDir)$(TargetFileName) ..\Bin\$(TargetName).Lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\Lib\JSONCPP\json_internalarray.inl" />
+    <None Include="..\Lib\JSONCPP\json_internalmap.inl" />
+    <None Include="..\Lib\JSONCPP\json_valueiterator.inl" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Include\Common\CommonUtils.h" />
+    <ClInclude Include="..\Include\Common\FormatUtils.h" />
+    <ClInclude Include="..\Include\JSONCPP\autolink.h" />
+    <ClInclude Include="..\Include\JSONCPP\config.h" />
+    <ClInclude Include="..\Include\JSONCPP\features.h" />
+    <ClInclude Include="..\Include\JSONCPP\forwards.h" />
+    <ClInclude Include="..\Include\JSONCPP\json.h" />
+    <ClInclude Include="..\Include\JSONCPP\reader.h" />
+    <ClInclude Include="..\Include\JSONCPP\value.h" />
+    <ClInclude Include="..\Include\JSONCPP\writer.h" />
+    <ClInclude Include="..\Include\SocketUtil\EventSock.h" />
+    <ClInclude Include="..\Include\Util\Base64.h" />
+    <ClInclude Include="..\Lib\JSONCPP\json_batchallocator.h" />
+    <ClInclude Include="Caloris.h" />
+    <ClInclude Include="HeartBeatThread.h" />
+    <ClInclude Include="SocketIOPayloader.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Include\Common\CommonUtils.cpp" />
+    <ClCompile Include="..\Include\Common\FormatUtils.cpp" />
+    <ClCompile Include="..\Include\SocketUtil\EventSock.cpp" />
+    <ClCompile Include="..\Include\Util\Base64.cpp" />
+    <ClCompile Include="..\Lib\JSONCPP\json_reader.cpp" />
+    <ClCompile Include="..\Lib\JSONCPP\json_value.cpp" />
+    <ClCompile Include="..\Lib\JSONCPP\json_writer.cpp" />
+    <ClCompile Include="Caloris.cpp" />
+    <ClCompile Include="HeartBeatThread.cpp" />
+    <ClCompile Include="SocketIOPayloader.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

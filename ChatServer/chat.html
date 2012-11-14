@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>채팅 테스트</title>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        var socket;
+        window.onload = function () {
+            //서버와 소켓을 연결합니다.
+            socket = io.connect();
+
+            socket.on('loginAck', function () {
+                $("<li/>").text('Success Join!').prependTo($("#chatList"));
+            });
+
+            socket.on('chatAck', function (data) {
+                var msg = JSON.parse(data);
+                var message = msg.from + ' : ' + msg.chat;
+                $("<li/>").text(message).prependTo($("#chatList"));
+            });
+
+            $("#text").keyup(function (event) {
+                //엔터키를 눌렀을 때 자동으로 전송되도록 한다.
+                if (event.which == 13) {
+                    send();
+                }
+            });
+        }
+
+        function start(){          //
+            var msg = $("#username").val();
+            var msg2 = { "username": msg };
+            socket.emit('loginReq', JSON.stringify(msg2));
+        }
+
+        function send(){
+            var msg = $("#text").val();
+            var msg2 = { "chat": msg };
+            socket.emit('chatReq', JSON.stringify(msg2));
+
+            $("#text").val("");
+        }
+    </script>
+</head>
+<body>
+    <div>
+        이름을을 입력후 로그인 버튼 클릭! <br>
+        이름:<input type="text" id="username"/>
+        <button onclick="start()">로그인</button><br><br>
+    </div>
+    <div>
+        일반 채팅:
+        <input type="text" id="text"/>
+        <button onclick="send()">전송</button>
+    </div>
+    <div>
+        <ul id="chatList">
+        </ul>
+    </div>
+</body>
+</html>

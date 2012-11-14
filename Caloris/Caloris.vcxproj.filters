@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="SocketUtil">
+      <UniqueIdentifier>{1b27e075-63b5-4ee8-b827-7b4dccc77f30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{c589f479-a96b-4ea8-af9b-fef1dbd74098}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{4388eea4-3bc2-485b-a99d-1ecade0965fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSONCPP">
+      <UniqueIdentifier>{76ed4554-f10a-4c4f-9405-c3206b4317da}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="..\Lib\JSONCPP\json_internalarray.inl">
+      <Filter>JSONCPP</Filter>
+    </None>
+    <None Include="..\Lib\JSONCPP\json_internalmap.inl">
+      <Filter>JSONCPP</Filter>
+    </None>
+    <None Include="..\Lib\JSONCPP\json_valueiterator.inl">
+      <Filter>JSONCPP</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Util\Base64.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\SocketUtil\EventSock.h">
+      <Filter>SocketUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="Caloris.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Common\CommonUtils.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Common\FormatUtils.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketIOPayloader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\JSONCPP\autolink.h">
+      <Filter>JSONCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\JSONCPP\config.h">
+      <Filter>JSONCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\JSONCPP\features.h">
+      <Filter>JSONCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\JSONCPP\forwards.h">
+      <Filter>JSONCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\JSONCPP\json.h">
+      <Filter>JSONCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\JSONCPP\reader.h">
+      <Filter>JSONCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\JSONCPP\value.h">
+      <Filter>JSONCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\JSONCPP\writer.h">
+      <Filter>JSONCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lib\JSONCPP\json_batchallocator.h">
+      <Filter>JSONCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="HeartBeatThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Util\Base64.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\SocketUtil\EventSock.cpp">
+      <Filter>SocketUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="Caloris.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Common\CommonUtils.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Include\Common\FormatUtils.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketIOPayloader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lib\JSONCPP\json_reader.cpp">
+      <Filter>JSONCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lib\JSONCPP\json_value.cpp">
+      <Filter>JSONCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Lib\JSONCPP\json_writer.cpp">
+      <Filter>JSONCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="HeartBeatThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
