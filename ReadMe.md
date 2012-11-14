@@ -7,7 +7,7 @@
 **Caloris** is a simple Win32 library for Socket.IO, without Boost::Asio. Boost::Asio is most powerful library, but Asio's IOCP model have too many thread.
 So, Caloris select **WSAEventSelect** model.
 
-## Socket.IO ##
+## Websocket protocol ##
 
 Socket.IO is a module of node.js that base on RFC6455, but modified.
 I was analyzed Socket.IO's TCP packet and write packet code on C/C++.
