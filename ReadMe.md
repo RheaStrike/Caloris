@@ -19,7 +19,7 @@ See [http://rhea.pe.kr/515](http://rhea.pe.kr/515).
 ## WSAEventSelect ##
 
 Caloris's socket model is WSAEventSelect. This is an asynchronous I/O and very fast. I like WSAEventSelect on client side. See 
-[http://msdn.microsoft.com/en-us/library/windows/desktop/ms741576(v=vs.85).aspx](http://msdn.microsoft.com/en-us/library/windows/desktop/ms741576(v=vs.85).aspx).
+[http://msdn.microsoft.com/en-us/library/windows/desktop/ms741576(v=vs.85).aspx](http://msdn.microsoft.com/en-us/library/windows/desktop/ms741576(v=vs.85).
 ![](http://github.com/RheaStrike/Caloris/raw/master/PubImage/EventCaloris.PNG)
 
 ## Why Caloris? ##
